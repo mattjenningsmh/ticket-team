@@ -1,5 +1,5 @@
 # TICKET TEAM
-
+(This was a collaborative project between 3 team members, it is not all my work)
 ## GitHub
 Repository can be cloned from [https://github.com/CitadelCS/ticket-team](https://github.com/CitadelCS/ticket-team)
 

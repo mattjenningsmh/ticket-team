@@ -1,0 +1,51 @@
+info:
+  app:
+    description: Template Spring Boot API for use of CSCI 602
+    name: csci-602
+    version: 1.0.0
+management:
+  endpoint:
+    health:
+      enabled: true
+    info:
+      enabled: true
+  endpoints:
+    enabled-by-default: false
+    web:
+      exposure:
+        include: openapi, swagger-ui
+server:
+  port: 5001
+spring:
+  application:
+    name: csci-602
+  datasource:
+    password: {DB_PASSWORD}
+    #url: jdbc:postgresql://ccba8a0vn4fb2p.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/dbvektqilqd4oi
+    url: jdbc:postgresql://c1i13pt05ja4ag.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/dbvektqilqd4oi
+    username: {DB_USERNAME}
+  mvc:
+    servlet:
+      load-on-startup: 1
+  profiles:
+    active: "@spring.profiles.active@"
+springdoc:
+  packagesToScan: edu.citadel.api
+  pathsToMatch: /v1, /**
+  show-actuator: true
+thirdparty:
+  api:
+    base-url: https://api.thirdparty.com
+    api-key: your-api-key
+ticketmaster:
+  api:
+    base-url: https://app.ticketmaster.com/discovery/v2
+    api-key: {TICKETMASTER_API_KEY}
+eventbrite:
+  api:
+    base-url: https://www.eventbriteapi.com/v3
+    api-key: {EVENTBRITE_API_KEY}
+lastfm:
+  api:
+    base-url: https://ws.audioscrobbler.com/2.0
+    api-key: {LASTFM_API_KEY}
